@@ -1,24 +1,27 @@
-# README
+# legsim
+## Quick start
+### Setting up your local development enviornment 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Download and install Docker Desktop: https://docs.docker.com/desktop/install/windows-install/
+2. Install Ruby
+   ```
+   sudo apt install ruby-full
+   ```
+   Check that Ruby is installed
+   ```
+   ruby -v
+   ```
+3. Install Rails
+   ```
+   sudo apt install rails
+   ```
+4. Install Bundler
+  ```
+  gem install bundler
+  ```
+5. Download and Install Node.js: https://nodejs.org/en
+6. Install Yarn: https://yarnpkg.com/getting-started/install
 
-Things you may want to cover:
+### Running the project locally 
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
