@@ -23,9 +23,11 @@
 6. Install Yarn: https://yarnpkg.com/getting-started/install
 7. Clone the Project to your local machine
    ```
+   git clone https://github.com/SLgolden/legsim-public.git
    ```
 9. Change directory to the project root
    ```
+   cd legsim-public
    ```
 ### Running the project locally 
 
@@ -46,9 +48,31 @@
    ```
    docker run --name your_container_name -e MYSQL_ROOT_PASSWORD=your_password -d mysql
    ```
-   Replace `your_container_name' with your desired container name
-   Replace `your_password' with your desired password
-5. 
+   Replace "your_container_name" with your desired container name
+   Replace "your_password" with your desired password
+5. Comment out lines 25 and 26 in config/application.rb
+   ```
+   user_name:            Rails.application.credentials.gmail[:user_name],
+   password:             Rails.application.credentials.gmail[:password],
+   ```
+6. Create the master.key file
+   Generate a key:
+   ```
+   rails secret   
+   ```
+   Copy the key. 
+   Generate the file:
+   ```
+   echo "your_generated_key" > config/master.key
+   ```
+   Replace "your_generated_key" with your generated key.
+7. Create and populate the credentials.yml file:
+   ```
+   EDITOR=vim rails credentials:edit
+   ```
+   Populate the credentials.yml file using the '' template
+   
+   
 
 
 
