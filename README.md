@@ -16,9 +16,9 @@
    sudo apt install rails
    ```
 4. Install Bundler
-  ```
-  gem install bundler
-  ```
+   ```
+   gem install bundler
+   ```
 5. Download and Install Node.js: https://nodejs.org/en
 6. Install Yarn: https://yarnpkg.com/getting-started/install
 7. Clone the Project to your local machine
@@ -36,10 +36,10 @@
    bundle install
    ```
 2. Alter PATH enviornment variable
-  ```
-  export PATH="/Ruby31-x64/bin/bundle"
-  export PATH="/Ruby31-x64/bin/ruby"
-  ```
+   ```
+   export PATH="/Ruby31-x64/bin/bundle"
+   export PATH="/Ruby31-x64/bin/ruby"
+   ```
 3. Create a MySQL Docker Image
    ```
    docker pull mysql
@@ -79,36 +79,37 @@
   - create a new field 'port', with value '3306'
     The final code should look something like this:
     ```
-   development:
-  <<: *default
-  username: root
-  database: your_database_name
-  password: your_database_password
-  host: 127.0.0.1
-  port: 3306
-  #socket: /tmp/mysql.sock
-  # adapter: mysql2
-  # database: legsim
-  # useranme: foo
-  # password:
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: your_database_name
-  host: 127.0.0.1
-  port: 3306
+       development:
+      <<: *default
+      username: root
+      database: your_database_name
+      password: your_database_password
+      host: 127.0.0.1
+      port: 3306
+      #socket: /tmp/mysql.sock
+      # adapter: mysql2
+      # database: legsim
+      # useranme: foo
+      # password:
+    
+    # Warning: The database defined as "test" will be erased and
+    # re-generated from your development database when you run "rake".
+    # Do not set this db to the same as development or production.
+    test:
+      <<: *default
+      database: your_database_name
+      host: 127.0.0.1
+      port: 3306
     ```
 9. Create the databases
    ```
    rake db:create
    ```
 10. Migrate the databases
-   ```
-   rake db:migrate
-   ```
+
+    ```
+    rake db:migrate
+    ```
    
    
 
