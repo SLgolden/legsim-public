@@ -37,8 +37,7 @@
    ```
 2. Alter PATH enviornment variable
    ```
-   export PATH="/Ruby31-x64/bin/bundle"
-   export PATH="/Ruby31-x64/bin/ruby"
+   export PATH="$PATH:/Ruby31-x64/bin"
    ```
 3. Create a MySQL Docker Image
    ```
